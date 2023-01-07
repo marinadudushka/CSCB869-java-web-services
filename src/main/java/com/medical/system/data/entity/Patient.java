@@ -18,7 +18,10 @@ import java.time.LocalDate;
 
 public class Patient extends BaseEntity{
     private String name;
-    private String EGN;
+
+    @Column(unique = true)
+    private String egn;
+
     private LocalDate insurancePaymentDate;
 
     @ManyToOne
